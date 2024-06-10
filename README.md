@@ -1,4 +1,5 @@
 # Hexagonal architecture design with ODD 
 # ODD: Observability Driven Development
 
-An example application about Hexagonal Architecture With Spring Boot with some Observability Driven Development practices.
+This is the repository contains an example application about Hexagonal Architecture. 
+Application also contains some Observability Driven Development practices.
