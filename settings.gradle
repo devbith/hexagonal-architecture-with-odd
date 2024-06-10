@@ -1,0 +1,3 @@
+rootProject.name = 'hexagonal-architecture-with-odd'
+
+include('catalog-service')

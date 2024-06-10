@@ -1,0 +1,26 @@
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+  <changeSet id="create catalog" author="">
+    <sql>
+      CREATE TABLE IF NOT EXISTS catalog_service.catalog
+      (
+        id SERIAL NOT NULL PRIMARY KEY,
+        name VARCHAR,
+        price DOUBLE,
+        currency_code VARCHAR(3),
+        type VARCHAR,
+        created_at TIMESTAMP WITH TIME ZONE NOT NULL,
+        updated_at TIMESTAMP WITH TIME ZONE NOT NULL
+      );
+
+      CREATE INDEX IF NOT EXISTS catalog_idx ON catalog_service.catalog (id);
+    </sql>
+    <rollback>
+      DROP TABLE IF EXISTS catalog_service.catalog;
+    </rollback>
+  </changeSet>
+
+</databaseChangeLog>

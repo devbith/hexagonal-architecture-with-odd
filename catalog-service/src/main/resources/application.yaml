@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./h2/app.db;DATABASE_TO_LOWER=TRUE;CASE_INSENSITIVE_IDENTIFIERS=TRUE;DB_CLOSE_DELAY=-1;MODE=PostgreSQL;AUTO_SERVER=TRUE;
+    username: sa
+    password: 123
+    embedded-database-connection: h2
+    driver-class-name: org.h2.Driver
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog-master.xml
+    user: ${DB_USERNAME:sa}
+    password: ${DB_PASSWORD:123}
+    url: ${POSTGRES_URL:jdbc:h2:file:./h2/app.db;DATABASE_TO_LOWER=TRUE;CASE_INSENSITIVE_IDENTIFIERS=TRUE;DB_CLOSE_DELAY=-1;MODE=PostgreSQL;AUTO_SERVER=TRUE;}
+    contexts: ${LIQUIBASE_CONTEXT:}
+  h2:
+    console:
+      enabled: true
