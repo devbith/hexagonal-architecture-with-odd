@@ -9,7 +9,7 @@ import org.springframework.context.annotation.FilterType;
 
 @SpringBootApplication
 @ComponentScan(
-    basePackages = "com.observability.catalogservice",
+    basePackages = "com.catalogservice",
     includeFilters = {
         @ComponentScan.Filter(type = FilterType.ANNOTATION, value = Adaptor.class),
         @ComponentScan.Filter(type = FilterType.ANNOTATION, value = UseCase.class)
