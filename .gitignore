@@ -37,3 +37,6 @@ out/
 
 ### DS_Store ###
 *.DS_Store
+
+# Ignore H2 folder 
+/h2
